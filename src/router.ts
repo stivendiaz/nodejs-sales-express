@@ -2,6 +2,7 @@ import { Request, Response, Router } from 'express';
 
 import * as productsController from './controllers/productsController';
 import * as rolesController from './controllers/rolesController';
+import * as usersController from './controllers/usersController';
 const router = Router();
 
 router
@@ -16,5 +17,10 @@ router
   .put('/roles/:id', rolesController.update)
   .delete('/roles/:id', rolesController.remove)
   .post('/roles', rolesController.create)
+  .get('/users', usersController.list)
+  .get('/users/:id', usersController.get)
+  .put('/users/:id', usersController.update)
+  .delete('/users/:id', usersController.remove)
+  .post('/users', usersController.create)
 
 export default router;

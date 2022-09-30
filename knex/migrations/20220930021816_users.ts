@@ -12,7 +12,6 @@ export const up = (knex: Knex): Promise<void> =>
     table.string('document');
     table.string('lastName');
     table.string('name');
-    table.double('price');
     table.uuid('rolesId');
     table.foreign('rolesId').references('id').inTable(Role.tableName);
   });
