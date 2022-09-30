@@ -4,6 +4,13 @@ import { config } from './src/config';
 
 const defaultKnexConfig = {
   client: 'pg',
+  connection: {
+    database: "tienda"
+  },
+  pool: {
+    min: 2,
+    max: 10
+  },
   migrations: {
     tableName: 'knex_migrations',
     directory: path.resolve('knex/migrations'),
