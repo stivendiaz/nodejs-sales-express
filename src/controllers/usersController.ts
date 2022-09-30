@@ -54,7 +54,7 @@ export const create = async (
   res: Response
 ): Promise<Response> => {
   const { document, lastName, name, rolesId } = req.body;
-  const bag = await User.query().insert({ document, lastName, name, rolesId });
+  const user = await User.query().insert({ document, lastName, name, rolesId });
 
-  return res.status(HttpStatus.CREATED).json(bag);
+  return res.status(HttpStatus.CREATED).json(user);
 };
