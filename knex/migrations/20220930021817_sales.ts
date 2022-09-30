@@ -6,8 +6,9 @@ import User from "../../src/models/User";
 export const up = (knex: Knex): Promise<void> =>
   knex.schema.createTable(Sale.tableName, (table: Knex.TableBuilder) => {
     table.uuid("id")
-    .primary();
-    table.timestamps();
+    .primary()
+    .defaultTo(knex.raw('gen_random_uuid()'));
+    table.timestamps(true, true);
     table.uuid('productId');
     table.uuid('usersId');
     table.integer('qty');

@@ -5,9 +5,10 @@ import Role from "../../src/models/Role";
 export const up = (knex: Knex): Promise<void> =>
   knex.schema.createTable(Role.tableName, (table: Knex.TableBuilder) => {
     table.uuid("id")
-      .primary();
-    table.timestamps();
-    table.string('name');
+      .primary()
+      .defaultTo(knex.raw(' gen_random_uuid()'));
+      table.timestamps(true, true);
+      table.string('name');
   });
 
 

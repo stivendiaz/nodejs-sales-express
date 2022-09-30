@@ -6,8 +6,9 @@ import User from "../../src/models/User";
 export const up = (knex: Knex): Promise<void> =>
   knex.schema.createTable(User.tableName, (table: Knex.TableBuilder) => {
     table.uuid("id")
-      .primary();
-    table.timestamps();
+      .primary()
+      .defaultTo(knex.raw('gen_random_uuid()'));
+    table.timestamps(true, true);
     table.string('document');
     table.string('lastName');
     table.string('name');
