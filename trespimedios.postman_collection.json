@@ -1,0 +1,839 @@
+{
+	"info": {
+		"_postman_id": "871fbf69-0f7f-4f41-ac64-676ca2876d7d",
+		"name": "trespimedios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3405503"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/products/:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "479fba0a-baaf-4b46-95a2-83a663817646",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/products/3bed5d90-64ed-4bc1-8a3a-a378737ed542",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"3bed5d90-64ed-4bc1-8a3a-a378737ed542"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLWlkIiwiaWF0IjoxNjUxMjQyNDA2fQ.nDJdFYn2Au7IDrkzXLMYFuHIyJyhSK1JA1PQ64fmdFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "479fba0a-baaf-4b46-95a2-83a663817646",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Zenu\",\n    \"name\": \"Salchicha\",\n    \"price\": 5000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/products/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLWlkIiwiaWF0IjoxNjUxMjQyNDA2fQ.nDJdFYn2Au7IDrkzXLMYFuHIyJyhSK1JA1PQ64fmdFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "479fba0a-baaf-4b46-95a2-83a663817646",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Zenu\",\n    \"name\": \"Salchichon\",\n    \"price\": 5000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/products/07246441-b9e7-4e2a-89cc-3322cb2f62f8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"07246441-b9e7-4e2a-89cc-3322cb2f62f8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/products/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLWlkIiwiaWF0IjoxNjUxMjQyNDA2fQ.nDJdFYn2Au7IDrkzXLMYFuHIyJyhSK1JA1PQ64fmdFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "479fba0a-baaf-4b46-95a2-83a663817646",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n <pedido>\n     <estado>Cotizado</estado>\n     <numMaterial>40060769</numMaterial>\n     <cantidadACotizar>3</cantidadACotizar>\n     <codigoApi>Cotizado-40060766-39</codigoApi>\n     <descripcion>\n         40060766 - Conector para cable; Marca 1: IFM EFECTOR; N-parte 1: EVC151; Modelo 1: ADOGF040MSS0005H04\n     Marca</descripcion>\n     <asuntoCorreo></asuntoCorreo>\n     <cliente></cliente>\n     <cantidad></cantidad>\n     <cotizacion></cotizacion>\n     <parteSol>EVC151</parteSol>\n     <sitio>COSTA</sitio>\n     <link>https://www.ifm.com/us/en/product/EVC151</link>\n </pedido>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/products/07246441-b9e7-4e2a-89cc-3322cb2f62f8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"07246441-b9e7-4e2a-89cc-3322cb2f62f8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/roles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "479fba0a-baaf-4b46-95a2-83a663817646",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/roles/:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "479fba0a-baaf-4b46-95a2-83a663817646",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/roles/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"roles",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/roles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLWlkIiwiaWF0IjoxNjUxMjQyNDA2fQ.nDJdFYn2Au7IDrkzXLMYFuHIyJyhSK1JA1PQ64fmdFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/roles/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLWlkIiwiaWF0IjoxNjUxMjQyNDA2fQ.nDJdFYn2Au7IDrkzXLMYFuHIyJyhSK1JA1PQ64fmdFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "479fba0a-baaf-4b46-95a2-83a663817646",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Admins\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/roles/a93b1b06-d251-4e97-b810-7e9e3ea6e064",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"roles",
+						"a93b1b06-d251-4e97-b810-7e9e3ea6e064"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/roles/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLWlkIiwiaWF0IjoxNjUxMjQyNDA2fQ.nDJdFYn2Au7IDrkzXLMYFuHIyJyhSK1JA1PQ64fmdFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n <pedido>\n     <estado>Cotizado</estado>\n     <numMaterial>40060769</numMaterial>\n     <cantidadACotizar>3</cantidadACotizar>\n     <codigoApi>Cotizado-40060766-39</codigoApi>\n     <descripcion>\n         40060766 - Conector para cable; Marca 1: IFM EFECTOR; N-parte 1: EVC151; Modelo 1: ADOGF040MSS0005H04\n     Marca</descripcion>\n     <asuntoCorreo></asuntoCorreo>\n     <cliente></cliente>\n     <cantidad></cantidad>\n     <cotizacion></cotizacion>\n     <parteSol>EVC151</parteSol>\n     <sitio>COSTA</sitio>\n     <link>https://www.ifm.com/us/en/product/EVC151</link>\n </pedido>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/roles/a93b1b06-d251-4e97-b810-7e9e3ea6e064?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"roles",
+						"a93b1b06-d251-4e97-b810-7e9e3ea6e064"
+					],
+					"query": [
+						{
+							"key": "Auth",
+							"value": "479fba0a-baaf-4b46-95a2-83a663817646"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "password",
+						"value": "not-a-secret",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/users?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "Auth",
+							"value": "479fba0a-baaf-4b46-95a2-83a663817646"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/users/:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "password",
+						"value": "not-a-secret",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/users/776f393c-a740-4bbe-8eee-fd9e81e71c21?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"776f393c-a740-4bbe-8eee-fd9e81e71c21"
+					],
+					"query": [
+						{
+							"key": "Auth",
+							"value": "479fba0a-baaf-4b46-95a2-83a663817646"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/users/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLWlkIiwiaWF0IjoxNjUxMjQyNDA2fQ.nDJdFYn2Au7IDrkzXLMYFuHIyJyhSK1JA1PQ64fmdFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "479fba0a-baaf-4b46-95a2-83a663817646",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Stiven\",\n    \"document\": \"1035437650\",\n    \"lastName\":\"Diaz\", \n    \"rolesId\": \"a93b1b06-d251-4e97-b810-7e9e3ea6e064\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/roles/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLWlkIiwiaWF0IjoxNjUxMjQyNDA2fQ.nDJdFYn2Au7IDrkzXLMYFuHIyJyhSK1JA1PQ64fmdFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "479fba0a-baaf-4b46-95a2-83a663817646",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Stivan\",\n    \"document\": \"1035437650\",\n    \"lastName\":\"Diaz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/776f393c-a740-4bbe-8eee-fd9e81e71c21",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"776f393c-a740-4bbe-8eee-fd9e81e71c21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/roles/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLWlkIiwiaWF0IjoxNjUxMjQyNDA2fQ.nDJdFYn2Au7IDrkzXLMYFuHIyJyhSK1JA1PQ64fmdFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n <pedido>\n     <estado>Cotizado</estado>\n     <numMaterial>40060769</numMaterial>\n     <cantidadACotizar>3</cantidadACotizar>\n     <codigoApi>Cotizado-40060766-39</codigoApi>\n     <descripcion>\n         40060766 - Conector para cable; Marca 1: IFM EFECTOR; N-parte 1: EVC151; Modelo 1: ADOGF040MSS0005H04\n     Marca</descripcion>\n     <asuntoCorreo></asuntoCorreo>\n     <cliente></cliente>\n     <cantidad></cantidad>\n     <cotizacion></cotizacion>\n     <parteSol>EVC151</parteSol>\n     <sitio>COSTA</sitio>\n     <link>https://www.ifm.com/us/en/product/EVC151</link>\n </pedido>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/776f393c-a740-4bbe-8eee-fd9e81e71c21?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"776f393c-a740-4bbe-8eee-fd9e81e71c21"
+					],
+					"query": [
+						{
+							"key": "Auth",
+							"value": "479fba0a-baaf-4b46-95a2-83a663817646"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/sales",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "password",
+						"value": "not-a-secret",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/sales",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"sales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/sales/:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "password",
+						"value": "not-a-secret",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/sales/573fea08-252b-4194-9126-f717bd10585a?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"sales",
+						"573fea08-252b-4194-9126-f717bd10585a"
+					],
+					"query": [
+						{
+							"key": "Auth",
+							"value": "479fba0a-baaf-4b46-95a2-83a663817646"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/sales",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLWlkIiwiaWF0IjoxNjUxMjQyNDA2fQ.nDJdFYn2Au7IDrkzXLMYFuHIyJyhSK1JA1PQ64fmdFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\": \"07246441-b9e7-4e2a-89cc-3322cb2f62f8\",\n    \"qty\": 1,\n    \"usersId\":\"3fd22586-bba4-402e-8378-da0209d0237c\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/sales",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"sales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/roles/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLWlkIiwiaWF0IjoxNjUxMjQyNDA2fQ.nDJdFYn2Au7IDrkzXLMYFuHIyJyhSK1JA1PQ64fmdFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "479fba0a-baaf-4b46-95a2-83a663817646",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\": \"07246441-b9e7-4e2a-89cc-3322cb2f62f8\",\n    \"qty\": 3,\n    \"usersId\":\"3fd22586-bba4-402e-8378-da0209d0237c\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/sales/573fea08-252b-4194-9126-f717bd10585a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"sales",
+						"573fea08-252b-4194-9126-f717bd10585a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/roles/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLWlkIiwiaWF0IjoxNjUxMjQyNDA2fQ.nDJdFYn2Au7IDrkzXLMYFuHIyJyhSK1JA1PQ64fmdFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n <pedido>\n     <estado>Cotizado</estado>\n     <numMaterial>40060769</numMaterial>\n     <cantidadACotizar>3</cantidadACotizar>\n     <codigoApi>Cotizado-40060766-39</codigoApi>\n     <descripcion>\n         40060766 - Conector para cable; Marca 1: IFM EFECTOR; N-parte 1: EVC151; Modelo 1: ADOGF040MSS0005H04\n     Marca</descripcion>\n     <asuntoCorreo></asuntoCorreo>\n     <cliente></cliente>\n     <cantidad></cantidad>\n     <cotizacion></cotizacion>\n     <parteSol>EVC151</parteSol>\n     <sitio>COSTA</sitio>\n     <link>https://www.ifm.com/us/en/product/EVC151</link>\n </pedido>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/776f393c-a740-4bbe-8eee-fd9e81e71c21?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"776f393c-a740-4bbe-8eee-fd9e81e71c21"
+					],
+					"query": [
+						{
+							"key": "Auth",
+							"value": "479fba0a-baaf-4b46-95a2-83a663817646"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/services/total-by-day",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "479fba0a-baaf-4b46-95a2-83a663817646",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\": \"2022-09-30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/services/total-by-day",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"services",
+						"total-by-day"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/services/balance-by-month",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Auth",
+						"value": "479fba0a-baaf-4b46-95a2-83a663817646",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"month\": 9,\n    \"year\": 2022\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/services/balance-by-month",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"services",
+						"balance-by-month"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
