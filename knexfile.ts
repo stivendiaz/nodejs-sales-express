@@ -5,7 +5,7 @@ import { config } from './src/config';
 const defaultKnexConfig = {
   client: 'pg',
   connection: {
-    database: "tienda"
+    database: config.dbName,
   },
   pool: {
     min: 2,

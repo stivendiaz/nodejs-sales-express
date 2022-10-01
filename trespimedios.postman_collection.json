@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:5000/products",
+			"name": "http://localhost:5000/api/v1/products",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -19,13 +19,15 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/products",
+					"raw": "http://localhost:5000/api/v1/products",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"products"
 					]
 				}
@@ -33,7 +35,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/products/:id",
+			"name": "http://localhost:5000/api/v1/products/:id",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -44,13 +46,15 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/products/3bed5d90-64ed-4bc1-8a3a-a378737ed542",
+					"raw": "http://localhost:5000/api/v1/products/3bed5d90-64ed-4bc1-8a3a-a378737ed542",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"products",
 						"3bed5d90-64ed-4bc1-8a3a-a378737ed542"
 					]
@@ -59,7 +63,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/products",
+			"name": "http://localhost:5000/api/v1/products",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -89,13 +93,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/products",
+					"raw": "http://localhost:5000/api/v1/products",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"products"
 					]
 				}
@@ -103,7 +109,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/products/:id",
+			"name": "http://localhost:5000/api/v1/products/:id",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -133,13 +139,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/products/07246441-b9e7-4e2a-89cc-3322cb2f62f8",
+					"raw": "http://localhost:5000/api/v1/products/07246441-b9e7-4e2a-89cc-3322cb2f62f8",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"products",
 						"07246441-b9e7-4e2a-89cc-3322cb2f62f8"
 					]
@@ -148,7 +156,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/products/:id",
+			"name": "http://localhost:5000/api/v1/products/:id",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -178,13 +186,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/products/07246441-b9e7-4e2a-89cc-3322cb2f62f8",
+					"raw": "http://localhost:5000/api/v1/products/07246441-b9e7-4e2a-89cc-3322cb2f62f8",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"products",
 						"07246441-b9e7-4e2a-89cc-3322cb2f62f8"
 					]
@@ -193,7 +203,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/roles",
+			"name": "http://localhost:5000/api/v1/roles",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -204,13 +214,15 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/roles",
+					"raw": "http://localhost:5000/api/v1/roles",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"roles"
 					]
 				}
@@ -218,7 +230,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/roles/:id",
+			"name": "http://localhost:5000/api/v1/roles/:id",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -229,13 +241,15 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/roles/:id",
+					"raw": "http://localhost:5000/api/v1/roles/:id",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"roles",
 						":id"
 					],
@@ -250,7 +264,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/roles",
+			"name": "http://localhost:5000/api/v1/roles",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -266,8 +280,14 @@
 				"header": [
 					{
 						"key": "Auth",
-						"value": "",
+						"value": "479fba0a-baaf-4b46-95a2-83a663817646",
 						"type": "text"
+					},
+					{
+						"key": "Auth",
+						"value": "479fba0a-baaf-4b46-95a2-83a663817646",
+						"type": "text",
+						"disabled": true
 					}
 				],
 				"body": {
@@ -280,13 +300,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/roles",
+					"raw": "http://localhost:5000/api/v1/roles",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"roles"
 					]
 				}
@@ -294,7 +316,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/roles/:id",
+			"name": "http://localhost:5000/api/v1/roles/:id",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -324,13 +346,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/roles/a93b1b06-d251-4e97-b810-7e9e3ea6e064",
+					"raw": "http://localhost:5000/api/v1/roles/a93b1b06-d251-4e97-b810-7e9e3ea6e064",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"roles",
 						"a93b1b06-d251-4e97-b810-7e9e3ea6e064"
 					]
@@ -339,7 +363,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/roles/:id",
+			"name": "http://localhost:5000/api/v1/roles/:id",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -352,7 +376,13 @@
 					]
 				},
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "Auth",
+						"value": "479fba0a-baaf-4b46-95a2-83a663817646",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n <pedido>\n     <estado>Cotizado</estado>\n     <numMaterial>40060769</numMaterial>\n     <cantidadACotizar>3</cantidadACotizar>\n     <codigoApi>Cotizado-40060766-39</codigoApi>\n     <descripcion>\n         40060766 - Conector para cable; Marca 1: IFM EFECTOR; N-parte 1: EVC151; Modelo 1: ADOGF040MSS0005H04\n     Marca</descripcion>\n     <asuntoCorreo></asuntoCorreo>\n     <cliente></cliente>\n     <cantidad></cantidad>\n     <cotizacion></cotizacion>\n     <parteSol>EVC151</parteSol>\n     <sitio>COSTA</sitio>\n     <link>https://www.ifm.com/us/en/product/EVC151</link>\n </pedido>",
@@ -363,20 +393,23 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/roles/a93b1b06-d251-4e97-b810-7e9e3ea6e064?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
+					"raw": "http://localhost:5000/api/v1/roles/a93b1b06-d251-4e97-b810-7e9e3ea6e064",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"roles",
 						"a93b1b06-d251-4e97-b810-7e9e3ea6e064"
 					],
 					"query": [
 						{
-							"key": "Auth",
-							"value": "479fba0a-baaf-4b46-95a2-83a663817646"
+							"key": "",
+							"value": "",
+							"disabled": true
 						}
 					]
 				}
@@ -384,7 +417,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/users",
+			"name": "http://localhost:5000/api/v1/users",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -395,13 +428,15 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/users?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
+					"raw": "http://localhost:5000/api/v1/users?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"users"
 					],
 					"query": [
@@ -415,7 +450,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/users/:id",
+			"name": "http://localhost:5000/api/v1/users/:id",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -426,13 +461,15 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/users/776f393c-a740-4bbe-8eee-fd9e81e71c21?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
+					"raw": "http://localhost:5000/api/v1/users/776f393c-a740-4bbe-8eee-fd9e81e71c21?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"users",
 						"776f393c-a740-4bbe-8eee-fd9e81e71c21"
 					],
@@ -447,7 +484,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/users/:id",
+			"name": "http://localhost:5000/api/v1/users/:id",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -477,13 +514,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/users",
+					"raw": "http://localhost:5000/api/v1/users",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"users"
 					]
 				}
@@ -491,7 +530,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/roles/:id",
+			"name": "http://localhost:5000/api/v1/roles/:id",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -521,13 +560,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/users/776f393c-a740-4bbe-8eee-fd9e81e71c21",
+					"raw": "http://localhost:5000/api/v1/users/776f393c-a740-4bbe-8eee-fd9e81e71c21",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"users",
 						"776f393c-a740-4bbe-8eee-fd9e81e71c21"
 					]
@@ -536,7 +577,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/roles/:id",
+			"name": "http://localhost:5000/api/v1/roles/:id",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -560,13 +601,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/users/776f393c-a740-4bbe-8eee-fd9e81e71c21?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
+					"raw": "http://localhost:5000/api/v1/users/776f393c-a740-4bbe-8eee-fd9e81e71c21?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"users",
 						"776f393c-a740-4bbe-8eee-fd9e81e71c21"
 					],
@@ -581,7 +624,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/sales",
+			"name": "http://localhost:5000/api/v1/sales",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -592,13 +635,15 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/sales",
+					"raw": "http://localhost:5000/api/v1/sales",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"sales"
 					]
 				}
@@ -606,7 +651,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/sales/:id",
+			"name": "http://localhost:5000/api/v1/sales/:id",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -617,13 +662,15 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/sales/573fea08-252b-4194-9126-f717bd10585a?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
+					"raw": "http://localhost:5000/api/v1/sales/573fea08-252b-4194-9126-f717bd10585a?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"sales",
 						"573fea08-252b-4194-9126-f717bd10585a"
 					],
@@ -638,7 +685,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/sales",
+			"name": "http://localhost:5000/api/v1/sales",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -662,13 +709,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/sales",
+					"raw": "http://localhost:5000/api/v1/sales",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"sales"
 					]
 				}
@@ -676,7 +725,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/roles/:id",
+			"name": "http://localhost:5000/api/v1/roles/:id",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -706,13 +755,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/sales/573fea08-252b-4194-9126-f717bd10585a",
+					"raw": "http://localhost:5000/api/v1/sales/573fea08-252b-4194-9126-f717bd10585a",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"sales",
 						"573fea08-252b-4194-9126-f717bd10585a"
 					]
@@ -745,13 +796,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/users/776f393c-a740-4bbe-8eee-fd9e81e71c21?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
+					"raw": "http://localhost:5000/api/v1/users/776f393c-a740-4bbe-8eee-fd9e81e71c21?Auth=479fba0a-baaf-4b46-95a2-83a663817646",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"users",
 						"776f393c-a740-4bbe-8eee-fd9e81e71c21"
 					],
@@ -766,7 +819,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/services/total-by-day",
+			"name": "http://localhost:5000/api/v1/services/total-by-day",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -786,13 +839,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/services/total-by-day",
+					"raw": "http://localhost:5000/api/v1/services/total-by-day",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"services",
 						"total-by-day"
 					]
@@ -801,7 +856,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/services/balance-by-month",
+			"name": "http://localhost:5000/api/v1/services/balance-by-month",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -821,13 +876,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/services/balance-by-month",
+					"raw": "http://localhost:5000/api/v1/services/balance-by-month",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
+						"api",
+						"v1",
 						"services",
 						"balance-by-month"
 					]

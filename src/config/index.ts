@@ -9,6 +9,7 @@ enum NodeEnv {
 
 interface Env {
   env: NodeEnv;
+  dbName: string;
   dbConnection: string;
   dbTestConnection: string;
   knexDebug: boolean;
@@ -17,6 +18,7 @@ interface Env {
 
 export const config: Env = {
   env: (process.env.NODE_ENV as NodeEnv) || NodeEnv.DEV,
+  dbName: process.env.DB_NAME || 'store',
   dbConnection: process.env.PG_CONNECTION_STRING || '',
   dbTestConnection: process.env.PG_TEST_CONNECTION_STRING || '',
   knexDebug: process.env.KNEX_DEBUG === 'true',
