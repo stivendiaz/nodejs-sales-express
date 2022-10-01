@@ -4,6 +4,8 @@ import * as productsController from './controllers/productsController';
 import * as rolesController from './controllers/rolesController';
 import * as usersController from './controllers/usersController';
 import * as salesController from './controllers/salesController';
+import * as servicesController from './controllers/servicesController';
+
 const router = Router();
 
 router
@@ -28,5 +30,7 @@ router
   .put('/sales/:id', salesController.update)
   .delete('/sales/:id', salesController.remove)
   .post('/sales', salesController.create)
+  .post('/services/total-by-day', servicesController.calculateTotalByDate)
+  .post('/services/balance-by-month', servicesController.calculateBalanceByMonth)
 
 export default router;
