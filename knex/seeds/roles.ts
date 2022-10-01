@@ -5,14 +5,14 @@ const now = new Date();
 
 const roles = [
   {
-    id: "479fba0a-baaf-4b46-95a2-83a663817646",
-    name: "Admin",
+    id: '479fba0a-baaf-4b46-95a2-83a663817646',
+    name: 'Admin',
     createdAt: now,
     updatedAt: now,
   },
   {
-    id: "efbff7f6-6374-4c2f-9c96-3611c65068ba",
-    name: "Employee",
+    id: 'efbff7f6-6374-4c2f-9c96-3611c65068ba',
+    name: 'Employee',
     createdAt: now,
     updatedAt: now,
   },

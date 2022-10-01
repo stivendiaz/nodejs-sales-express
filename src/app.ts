@@ -7,7 +7,7 @@ const app = express();
 app.disable('etag');
 app.use(express.json());
 app.use(appLogger);
-app.use('/api/v1',router);
+app.use('/api/v1', router);
 app.use(errorLogger);
 
 export default app;

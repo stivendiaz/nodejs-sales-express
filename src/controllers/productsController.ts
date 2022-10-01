@@ -43,7 +43,9 @@ export const update = async (
   const product = await Product.query().findById(id);
 
   if (product) {
-    const newproduct = await product.$query().updateAndFetch({ description, name, price });
+    const newproduct = await product
+      .$query()
+      .updateAndFetch({ description, name, price });
     return res.status(HttpStatus.OK).json(newproduct);
   }
   return res.status(HttpStatus.NOT_FOUND).json(product);

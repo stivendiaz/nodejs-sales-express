@@ -43,7 +43,9 @@ export const update = async (
   const user = await User.query().findById(id);
 
   if (user) {
-    const newUser = await user.$query().updateAndFetch({ document, lastName, name, rolesId });
+    const newUser = await user
+      .$query()
+      .updateAndFetch({ document, lastName, name, rolesId });
     return res.status(HttpStatus.OK).json(newUser);
   }
   return res.status(HttpStatus.NOT_FOUND).json(user);

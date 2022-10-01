@@ -43,7 +43,9 @@ export const update = async (
   const sale = await Sale.query().findById(id);
 
   if (sale) {
-    const newsale = await sale.$query().updateAndFetch({ productId, qty, usersId });
+    const newsale = await sale
+      .$query()
+      .updateAndFetch({ productId, qty, usersId });
     return res.status(HttpStatus.OK).json(newsale);
   }
   return res.status(HttpStatus.NOT_FOUND).json(sale);
@@ -54,7 +56,12 @@ export const create = async (
   res: Response
 ): Promise<Response> => {
   const { productId, qty, usersId } = req.body;
-  const sale = await Sale.query().insert({ productId, qty, usersId, saleAt: new Date() });
+  const sale = await Sale.query().insert({
+    productId,
+    qty,
+    usersId,
+    saleAt: new Date(),
+  });
 
   return res.status(HttpStatus.CREATED).json(sale);
 };

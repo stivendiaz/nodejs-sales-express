@@ -8,21 +8,21 @@ export async function adminMiddleware(
   res: Response,
   next: NextFunction
 ) {
-    const { auth: userId } = req.headers;
-    try {
-        const role = await User.query().findById(userId!)
-        .join('roles', 'users.rolesId', 'roles.id')
-        .select('roles.name');
-        
-        if(role) {
-            if(role.name === 'Admin') {
-                return next();
-            }
-            return res.sendStatus(HttpStatus.FORBIDDEN);
-        }
-        return res.sendStatus(HttpStatus.UNAUTHORIZED);
-    } catch (error) {
-        return res.sendStatus(HttpStatus.UNAUTHORIZED);
-    }
+  const { auth: userId } = req.headers;
+  try {
+    const role = await User.query()
+      .findById(userId!)
+      .join('roles', 'users.rolesId', 'roles.id')
+      .select('roles.name');
 
-};
+    if (role) {
+      if (role.name === 'Admin') {
+        return next();
+      }
+      return res.sendStatus(HttpStatus.FORBIDDEN);
+    }
+    return res.sendStatus(HttpStatus.UNAUTHORIZED);
+  } catch (error) {
+    return res.sendStatus(HttpStatus.UNAUTHORIZED);
+  }
+}
